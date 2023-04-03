@@ -17,7 +17,7 @@ const ensureExistsClientMiddleware =
             email: ensureBodyClient.email,
         });
 
-        if (ensureClientExist) {
+        if (ensureClientExist && req.client.isActive == true) {
             throw new AppError('Existing client', 409);
         }
 

@@ -1,7 +1,76 @@
 import styled from "styled-components";
-
+  
 export const Section = styled.section`
+  nav {
+    z-index: 1;
+    position: absolute;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  
+  .nav {
+    display: flex;
+    position: fixed;
+    padding: 10px;
+    width: 100%;
+    justify-content:space-between;
+    height: 60px;
+    margin-top: -100px;
+    border-bottom: 3px solid #333;
+    align-items: center;
+    background-color: #000;
+    z-index: 3;
+  }
 
+  .profile {
+    display: flex;
+    margin-left: 30px;
+    color: #fff;
+
+    h2{
+      margin-right: 30px;
+    }
+
+    button {
+      padding: 10px;
+      background-color: #683998;
+      border-radius: 10px;
+      color: #fff;
+      margin-right: 10px;
+    }
+
+    button:hover{
+      background-color: #232434;
+    }
+  }
+
+  .infos {
+    margin-top: 100px;
+    padding: 25px;
+
+    h1{
+      margin-bottom: 20px;
+      color: #fff;
+    }
+
+    button {
+      padding: 10px;
+      background-color: #683998;
+      border-radius: 10px;
+      color: #fff;
+      margin-right: 10px;
+    }
+
+    button:hover{
+      background-color: #232434;
+    }
+  }
+
+  .divAll {
+    display: flex;
+    margin-top: 15px;
+    color: #f5f5f5;
+  }
 
   .App {
     display: flex;
@@ -11,7 +80,8 @@ export const Section = styled.section`
     width: 500px;
     margin: 50px auto;
     padding: 10px;
-    background-size: 100% 2em
+    background-size: 100% 2em;
+    margin: 60px;
   }
 
   .App h1{
@@ -30,32 +100,13 @@ export const Section = styled.section`
     width: 100%;
     margin-bottom: 12px
   }
-  .form input[type="text"]{
-    padding:10px;
-    width: 85%;
-    border: 1px solid #eee;
-    border-radius: 6px;
-  }
-  .form input[type="text"]:focus,
-  .form button[type="submit"]:focus{
-    outline:none;
-  }
-  .form button[type="submit"]{
-    background-color: #977;
-    margin-right: 20px;
-    color: #fff;
-    font-weight: bolder;
-    border-radius: 50px;
-    padding: 10px;
-    cursor: pointer
-  }
 
   .divAll {
     display: flex;
-    margin-top: 15px;
+    margin-top: 25px;
     margin-bottom: 15px;
-    margin-left: 10px;
   }
+
   .all {
     display: flex;
     margin-right: 20px;
@@ -63,112 +114,33 @@ export const Section = styled.section`
     width: 100%;
   }
 
-  .buttons {
+  .editarModal {
     display: flex;
-    margin-right: 0;
-    justify-content: space-between;
-    width: 120px;
-  }
-  input[type=checkbox] {
-    display: flex;
-    position: relative;
-    margin-top: -2px;
     justify-content: center;
-    cursor: pointer;
-    margin-right: 30px;
-  }
-
-  input[type=checkbox]:before {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  top: 2;
-  left: 0.5;
-  border-radius: 20px;
-  background-color: #977;
-}
-
-input[type=checkbox]:checked:after {
-  content: "";
-  display: block;
-  width: 5px;
-  height: 10px;
-  border: solid white;
-  border-width: 0 3px 3px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-  position: absolute;
-  top: 2.1px;
-  left: 2px;
-}
-span{
-  margin: 0px 15px;
-}
-  .contact-listItems{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-  .contact-item{
-    display:flex;
-    border-radius: 50%;
-    color: red;
-    justify-content: space-between;
     align-items: center;
-    margin-bottom: 10px
-  }
-  .item-content{
-    width: 60%;
-    margin-left: 20px;
-  }
+    background-color: #77d7;
+    width: 250px;
+    border-radius: 12px;
+    margin: 0 auto;
+    padding: 20px;
 
-  .item-content.tracejado {
-    text-decoration: line-through;
-    color: #3e314b;
-  }
+    label {
+      display: flex;
+      color: #fff;
+      margin-top: 10px;
+    }
 
-  .contact-item button{
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    padding: 8px;
-    
-  }
-  .contact-item button:focus{
-    outline:none
-  }
-  .update-item{
-    background-color: #928123;
-    color:#fff;
-    border-radius: 5px;
-    padding: 7px;
-  }
-  .delete-item{
-    background-color: #683998;
-    color:#fff;
-    border-radius: 5px;
-    padding: 7px;
-  }
-  .update-form{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-  }
-  .update-new-input{
-    width: 80%;
-    border-radius: 6px;
-    border: 1px solid #eee;
-    padding: 8px;
-    outline: none;
-  }
-  .update-new-btn{
-    background-color: #977;
-    border-radius: 5px;
-    padding: 7px;
-    color: #fff;
-    cursor: pointer;
+    input {
+      display: flex;
+      margin: 15px;
+      height: 25px;
+      border-radius: 7px;
+    }
+
+    button{
+      display: flex;
+      justify-content: center;
+    }
   }
 `
+
